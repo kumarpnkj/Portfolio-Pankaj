@@ -1,4 +1,349 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- Full HTML content from the canvas would go here -->
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pankaj Kumar — Data Scientist | Engineer | Analyst</title>
+  <meta name="description" content="Portfolio of Pankaj Kumar — Data Scientist with experience across Electronic Systems, IT Infrastructure, and Data Analysis." />
+  <meta name="theme-color" content="#0A66C2" />
+
+  <meta property="og:title" content="Pankaj Kumar — Data Scientist | Engineer | Analyst" />
+  <meta property="og:description" content="Engineer turned Data Scientist. Projects: CNN image classification, Road Crash Analytics (FARS)." />
+  <meta property="og:type" content="website" />
+
+  <style>
+    :root{
+      --accent:#0A66C2;
+      --ink:#121212;
+      --muted:#6b7280;
+      --bg:#ffffff;
+      --card:#f8fafc;
+      --border:#e5e7eb;
+      --radius:16px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg)}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .container{max-width:1100px;margin:0 auto;padding:0 20px}
+    header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.85);backdrop-filter:saturate(180%) blur(10px);border-bottom:1px solid var(--border)}
+    .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+    .brand{font-weight:800;letter-spacing:.2px}
+    .brand span{color:var(--accent)}
+    .nav-links a{margin:0 10px;font-weight:600;color:#374151}
+    .nav-cta{display:inline-block;padding:10px 14px;border-radius:999px;background:var(--accent);color:#fff;font-weight:700}
+    .hamburger{display:none;background:none;border:0;font-size:26px}
+    .hero{padding:72px 0 32px}
+    .hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:28px}
+    .chip{display:inline-flex;align-items:center;gap:8px;padding:6px 10px;border:1px solid var(--border);border-radius:999px;color:var(--muted);background:#fff}
+    .title{font-size:40px;line-height:1.2;margin:.2em 0}
+    .subtitle{color:#374151;font-size:18px;margin:.4em 0 1.2em}
+    .hero-calls{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:12px;border:1px solid var(--border);font-weight:700}
+    .btn.primary{background:var(--accent);color:#fff;border-color:var(--accent)}
+    .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:20px}
+    .stat{padding:16px;border:1px solid var(--border);border-radius:12px;background:var(--card)}
+    .stat .num{font-weight:800;font-size:22px}
+    section{padding:56px 0;border-top:1px solid var(--border)}
+    h2{font-size:28px;margin:0 0 16px}
+    .section-intro{color:var(--muted);margin-bottom:24px}
+    .grid{display:grid;gap:18px}
+    .grid-2{grid-template-columns:repeat(2,1fr)}
+    .card{border:1px solid var(--border);background:var(--card);border-radius:var(--radius);padding:18px}
+    .timeline{position:relative;margin-left:10px}
+    .timeline:before{content:"";position:absolute;left:12px;top:0;bottom:0;width:2px;background:var(--border)}
+    .t-item{position:relative;padding-left:34px;margin-bottom:18px}
+    .t-item:before{content:"";position:absolute;left:6px;top:8px;width:12px;height:12px;border-radius:999px;background:var(--accent)}
+    .t-role{font-weight:700}
+    .t-meta{color:var(--muted);font-size:14px}
+    ul{margin:8px 0 0 18px}
+    .skill-pill{display:inline-block;border:1px solid var(--border);padding:8px 10px;border-radius:999px;margin:6px;background:#fff}
+    footer{padding:28px 0;border-top:1px solid var(--border);color:var(--muted)}
+    @media (max-width: 860px){
+      .hero-grid{grid-template-columns:1fr}
+      .stats{grid-template-columns:repeat(3,1fr)}
+    }
+    @media (max-width: 720px){
+      .nav-links{display:none}
+      .hamburger{display:block}
+      .mobile{display:none;border-top:1px solid var(--border);padding:12px 0}
+      .mobile a{display:block;padding:8px 0;color:#374151;font-weight:600}
+      .title{font-size:34px}
+      .stats{grid-template-columns:1fr 1fr 1fr}
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Pankaj Kumar",
+    "jobTitle": "Data Scientist | Engineer | Analyst",
+    "email": "pkumar7@umassd.edu",
+    "telephone": "+1-774-524-7835",
+    "url": "https://www.linkedin.com/in/kumarpnkj",
+    "address": {"@type":"PostalAddress","addressLocality":"Dartmouth","addressRegion":"MA","addressCountry":"US"}
+  }
+  </script>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">Pankaj <span>Kumar</span></div>
+      <nav class="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact" class="nav-cta">Contact</a>
+      </nav>
+      <button class="hamburger" aria-label="Open Menu" onclick="toggleMenu()">☰</button>
+    </div>
+    <div id="mobileMenu" class="container mobile">
+      <a href="#about" onclick="toggleMenu()">About</a>
+      <a href="#skills" onclick="toggleMenu()">Skills</a>
+      <a href="#experience" onclick="toggleMenu()">Experience</a>
+      <a href="#education" onclick="toggleMenu()">Education</a>
+      <a href="#projects" onclick="toggleMenu()">Projects</a>
+      <a href="#contact" onclick="toggleMenu()">Contact</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <span class="chip">📍 Dartmouth, MA · Open to Data roles</span>
+          <h1 class="title">Data Scientist | Engineer | Analyst</h1>
+          <p class="subtitle">Focused engineer with cross-domain experience in Electronic Systems, IT Infrastructure, and Data Analysis. I build reliable data products and dashboards, and apply machine learning to solve real problems.</p>
+          <div class="hero-calls">
+            <a class="btn primary" href="#projects">See my work →</a>
+            <a class="btn" href="mailto:pkumar7@umassd.edu">Email me</a>
+            <a class="btn" href="https://www.linkedin.com/in/kumarpnkj" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+          <div class="stats">
+            <div class="stat"><div class="num">10+ yrs</div><div class="label">Industry experience</div></div>
+            <div class="stat"><div class="num">94%</div><div class="label">CNN accuracy (vision)</div></div>
+            <div class="stat"><div class="num">15–20%</div><div class="label">Crash reduction impact</div></div>
+          </div>
+        </div>
+        <div class="card">
+          <h3 style="margin:0 0 6px">Quick profile</h3>
+          <p style="margin:0 0 8px;color:var(--muted)">Strong in Python/R, ML (sklearn, TensorFlow, PyTorch), and analytics dashboards (Tableau, Looker Studio).</p>
+          <ul>
+            <li>Data pipelines with Pandas/NumPy, tidyverse</li>
+            <li>Models: GLMs, CNNs, YOLO; feature engineering</li>
+            <li>Visualization: Tableau, Matplotlib, Plotly, ggplot2</li>
+            <li>Version control with Git/GitHub</li>
+            <li>Office tools: MS Office, Google Workspace</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <h2>About</h2>
+        <p class="section-intro">I am a focused and competent engineer with experience across Electronic Systems, IT Infrastructure, and Data Analysis. I enjoy turning messy data into clear insights and production-ready dashboards, and I communicate findings effectively for business audiences.</p>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="container">
+        <h2>Skills</h2>
+        <div class="grid grid-2">
+          <div class="card">
+            <h3 style="margin-top:0">Programming, IDEs</h3>
+            <div>
+              <span class="skill-pill">Python (Jupyter, Colab)</span>
+              <span class="skill-pill">R (RStudio)</span>
+              <span class="skill-pill">VS Code</span>
+            </div>
+          </div>
+          <div class="card">
+            <h3 style="margin-top:0">Data Manipulation & ETL</h3>
+            <div>
+              <span class="skill-pill">Pandas</span>
+              <span class="skill-pill">NumPy</span>
+              <span class="skill-pill">SciPy</span>
+              <span class="skill-pill">SQL</span>
+              <span class="skill-pill">tidyverse (dplyr, purrr, ggplot2)</span>
+            </div>
+          </div>
+          <div class="card">
+            <h3 style="margin-top:0">Machine Learning & Stats</h3>
+            <div>
+              <span class="skill-pill">scikit-learn</span>
+              <span class="skill-pill">TensorFlow</span>
+              <span class="skill-pill">PyTorch</span>
+              <span class="skill-pill">Keras</span>
+              <span class="skill-pill">OpenCV</span>
+              <span class="skill-pill">CNN</span>
+              <span class="skill-pill">YOLO</span>
+              <span class="skill-pill">GLMs</span>
+            </div>
+          </div>
+          <div class="card">
+            <h3 style="margin-top:0">Visualization & BI</h3>
+            <div>
+              <span class="skill-pill">Tableau</span>
+              <span class="skill-pill">Matplotlib</span>
+              <span class="skill-pill">Plotly</span>
+              <span class="skill-pill">Google Looker Studio</span>
+              <span class="skill-pill">MS Excel</span>
+            </div>
+          </div>
+          <div class="card">
+            <h3 style="margin-top:0">Version Control</h3>
+            <div>
+              <span class="skill-pill">Git</span>
+              <span class="skill-pill">GitHub</span>
+            </div>
+          </div>
+          <div class="card">
+            <h3 style="margin-top:0">Office & Productivity</h3>
+            <div>
+              <span class="skill-pill">MS Office Suite</span>
+              <span class="skill-pill">Google Workspace</span>
+              <span class="skill-pill">IBM Lotus Notes</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="container">
+        <h2>Experience</h2>
+        <div class="timeline">
+          <div class="t-item card">
+            <div class="t-role">Data Scientist & Head LMS; Partner — Aptcoder, India</div>
+            <div class="t-meta">Apr 2022 – Apr 2024</div>
+            <ul>
+              <li>Led AI integration in a K–12 LMS: automated curriculum creation & class scheduling; explored AR/VR/IoT kits.</li>
+              <li>Built progress dashboards and adaptive learning features to improve student outcomes.</li>
+              <li>Integrated CNN-based face recognition into the LMS module.</li>
+            </ul>
+          </div>
+          <div class="t-item card">
+            <div class="t-role">Assistant Manager – IT — Jaypee Infratech Ltd.</div>
+            <div class="t-meta">Sep 2018 – Apr 2022</div>
+            <ul>
+              <li>Aggregated & analyzed 9+ years of Yamuna Expressway crash data; identified 10+ high‑risk black spots; helped achieve 15–20% reduction in accidents.</li>
+              <li>Analyzed traffic from 60,000+ daily toll transactions; automated monthly reporting across departments.</li>
+              <li>Built interactive dashboards for executives, cutting manual reporting time by ~60%.</li>
+            </ul>
+          </div>
+          <div class="t-item card">
+            <div class="t-role">Systems Engineer — Jaypee Infratech Ltd.</div>
+            <div class="t-meta">Jul 2012 – Sep 2018</div>
+            <ul>
+              <li>Handled 50TB+/month highway operations data; implemented automated backups across 6 locations.</li>
+              <li>Performed crash analysis on 1,000+ monthly accident reports; supported safety measures.</li>
+              <li>Implemented semi‑automated tolling; improved processing time by 70% and data consistency.</li>
+              <li>Provided network & IT support at Formula 1 Grand Prix India 2013 with 100% uptime.</li>
+            </ul>
+          </div>
+          <div class="t-item card">
+            <div class="t-role">Maintenance & QC Engineer — Dixon Electronics, Noida</div>
+            <div class="t-meta">Sep 2011 – Jul 2012</div>
+            <ul>
+              <li>Led servicing & repairs in STB Division; maintained BOM and periodic quality reports.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <div class="container">
+        <h2>Education</h2>
+        <div class="grid">
+          <div class="card">
+            <strong>University of Massachusetts Dartmouth — M.S. in Data Science</strong>
+            <div class="t-meta">CGPA 3.9/4 · Expected Dec 2025</div>
+            <div class="section-intro">Relevant courses: Advanced Mathematical Statistics, Advanced Machine Learning, Business Analytics & Data Mining, Tableau for Knowledge Visualization.</div>
+          </div>
+          <div class="card">
+            <strong>Gautam Buddh Technical University — B.Tech in Electronics & Communications</strong>
+            <div class="t-meta">Sept 2011</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="container">
+        <h2>Projects</h2>
+        <div class="grid grid-2">
+          <div class="card">
+            <h3 style="margin-top:0">Kitchen Genius App</h3>
+            <p>Applied a CNN for image classification on a dataset of 21,000+ food images; achieved 94% accuracy with serial & parallel computing optimizations.</p>
+            <p class="t-meta">Tech: Python, TensorFlow/PyTorch, OpenCV, NumPy</p>
+          </div>
+          <div class="card">
+            <h3 style="margin-top:0">Road Crash Analysis — FARS (NHTSA)</h3>
+            <p>Analyzed crashes & fatalities across U.S. states (2019–2022). Explored seasonal/location/weather trends and compared pre‑ vs post‑pandemic patterns; found fatalities increased ~17.65%.</p>
+            <p class="t-meta">Tech: Python, Pandas, Matplotlib/Plotly, Tableau</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <h2>Contact</h2>
+        <p class="section-intro">Interested in collaborating or hiring? I’m open to data science, analytics, and ML roles.</p>
+        <div class="grid grid-2">
+          <div class="card">
+            <p><strong>Email:</strong> <a href="mailto:pkumar7@umassd.edu">pkumar7@umassd.edu</a></p>
+            <p><strong>Phone:</strong> <a href="tel:+17745247835">+1 (774) 524-7835</a></p>
+            <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/kumarpnkj" target="_blank" rel="noopener">/in/kumarpnkj</a></p>
+          </div>
+          <div class="card">
+            <form onsubmit="notify(event)">
+              <label for="name">Name</label>
+              <input id="name" required style="width:100%;padding:10px;border:1px solid var(--border);border-radius:8px;margin:6px 0 12px" />
+              <label for="email">Email</label>
+              <input id="email" type="email" required style="width:100%;padding:10px;border:1px solid var(--border);border-radius:8px;margin:6px 0 12px" />
+              <label for="msg">Message</label>
+              <textarea id="msg" rows="4" required style="width:100%;padding:10px;border:1px solid var(--border);border-radius:8px;margin:6px 0 12px"></textarea>
+              <button class="btn primary" type="submit">Send message</button>
+              <p id="formNote" class="t-meta" style="margin-top:8px;color:var(--muted)">This demo form will open your email client to send a message.</p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      © <span id="year"></span> Pankaj Kumar · Built for GitHub Pages / Netlify · Dartmouth, MA
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu(){
+      const el=document.getElementById('mobileMenu');
+      if(!el) return; el.style.display = (el.style.display==='block') ? 'none' : 'block';
+    }
+    function notify(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const msg = encodeURIComponent(document.getElementById('msg').value.trim());
+      const subject = encodeURIComponent(`Portfolio contact from ${name}`);
+      const body = `%0D%0AName: ${encodeURIComponent(name)}%0D%0AEmail: ${encodeURIComponent(email)}%0D%0A%0D%0A${msg}`;
+      window.location.href = `mailto:pkumar7@umassd.edu?subject=${subject}&body=${body}`;
+      document.getElementById('formNote').textContent = 'Thanks! Your email draft is opening…';
+    }
+    document.addEventListener('DOMContentLoaded', function(){
+      const y = document.getElementById('year');
+      if (y) y.textContent = new Date().getFullYear();
+    });
+  </script>
+</body>
 </html>
